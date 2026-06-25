@@ -134,6 +134,215 @@ So if Team A averages 115 PTS and Team B averages 108, the PTS feature = +7 (fav
 
 ---
 
+## Accuracy Test Outcomes
+
+To put the model to the test I ran a simulation of 5 trials for each playoff year with the model being re-configed for the past 6 years to see it's accuracy. Accuracy is measured based on how many games it predicted correctly out of all games played in a normal playoff. The accuracy is then split into two: 
+
+- Accuracy: How accurate the model can predict who wins the series
+
+### Example of one simulation
+
+Year 2026 (actual results): 
+
+East: DET win ORL (7), CLE win TOR (7), NYC win ATL (6), BOS win PHI (7). 
+East Semi: CLE win DET (7), NYC win PHI (4). 
+East finals: NYC win CLE (4).
+
+West: OKC win PHX (4), LAL win HOU (6), MIN win DEN (6), SAS win POR (5).
+West Semi: OKC win LAL (4), SAS win MIN (6)
+West finals: SAS win OKC (7)
+
+Finals: NYC win SAS (5)
+
+Now for the simulation results:
+
+🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀
+       NBA PLAYOFF SIMULATION
+🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀🏀
+
+=======================================================
+  EASTERN CONFERENCE
+=======================================================
+
+  ── FIRST ROUND ──
+
+  🏀 DET vs ORL
+     → DET wins 4-2  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    DET      1-0
+     Game 2    DET      2-0
+     Game 3    DET      3-0
+     Game 4    ORL      3-1
+     Game 5    ORL      3-2
+     Game 6    DET      4-2
+
+  🏀 BOS vs PHI
+     → BOS wins 4-1  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    BOS      1-0
+     Game 2    BOS      2-0
+     Game 3    PHI      2-1
+     Game 4    BOS      3-1
+     Game 5    BOS      4-1
+
+  🏀 NYK vs ATL
+     → NYK wins 4-0  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    NYK      1-0
+     Game 2    NYK      2-0
+     Game 3    NYK      3-0
+     Game 4    NYK      4-0
+
+  🏀 CLE vs TOR
+     → TOR wins 4-1  (win prob: 70%)
+     Game     Winner   Series
+     Game 1    TOR      0-1
+     Game 2    TOR      0-2
+     Game 3    TOR      0-3
+     Game 4    CLE      1-3
+     Game 5    TOR      1-4
+
+  ── SEMIFINALS ──
+
+  🏀 DET vs TOR
+     → DET wins 4-1  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    DET      1-0
+     Game 2    DET      2-0
+     Game 3    DET      3-0
+     Game 4    TOR      3-1
+     Game 5    DET      4-1
+
+  🏀 BOS vs NYK
+     → NYK wins 4-2  (win prob: 70%)
+     Game     Winner   Series
+     Game 1    BOS      1-0
+     Game 2    BOS      2-0
+     Game 3    NYK      2-1
+     Game 4    NYK      2-2
+     Game 5    NYK      2-3
+     Game 6    NYK      2-4
+
+  ── CONFERENCE FINALS ──
+
+  🏀 DET vs NYK
+     → NYK wins 4-2  (win prob: 28%)
+     Game     Winner   Series
+     Game 1    NYK      0-1
+     Game 2    DET      1-1
+     Game 3    NYK      1-2
+     Game 4    DET      2-2
+     Game 5    NYK      2-3
+     Game 6    NYK      2-4
+
+=======================================================
+  WESTERN CONFERENCE
+=======================================================
+
+  ── FIRST ROUND ──
+
+  🏀 OKC vs PHX
+     → OKC wins 4-1  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    OKC      1-0
+     Game 2    OKC      2-0
+     Game 3    OKC      3-0
+     Game 4    PHX      3-1
+     Game 5    OKC      4-1
+
+  🏀 SAS vs POR
+     → SAS wins 4-2  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    SAS      1-0
+     Game 2    POR      1-1
+     Game 3    SAS      2-1
+     Game 4    SAS      3-1
+     Game 5    POR      3-2
+     Game 6    SAS      4-2
+
+  🏀 DEN vs MIN
+     → DEN wins 4-1  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    DEN      1-0
+     Game 2    DEN      2-0
+     Game 3    DEN      3-0
+     Game 4    MIN      3-1
+     Game 5    DEN      4-1
+
+  🏀 LAL vs HOU
+     → HOU wins 4-0  (win prob: 32%)
+     Game     Winner   Series
+     Game 1    HOU      0-1
+     Game 2    HOU      0-2
+     Game 3    HOU      0-3
+     Game 4    HOU      0-4
+
+  ── SEMIFINALS ──
+
+  🏀 OKC vs HOU
+     → OKC wins 4-1  (win prob: 72%)
+     Game     Winner   Series
+     Game 1    HOU      0-1
+     Game 2    OKC      1-1
+     Game 3    OKC      2-1
+     Game 4    OKC      3-1
+     Game 5    OKC      4-1
+
+  🏀 SAS vs DEN
+     → DEN wins 4-1  (win prob: 70%)
+     Game     Winner   Series
+     Game 1    DEN      0-1
+     Game 2    DEN      0-2
+     Game 3    SAS      1-2
+     Game 4    DEN      1-3
+     Game 5    DEN      1-4
+
+  ── CONFERENCE FINALS ──
+
+  🏀 OKC vs DEN
+     → OKC wins 4-2  (win prob: 60%)
+     Game     Winner   Series
+     Game 1    OKC      1-0
+     Game 2    OKC      2-0
+     Game 3    DEN      2-1
+     Game 4    OKC      3-1
+     Game 5    DEN      3-2
+     Game 6    OKC      4-2
+
+=======================================================
+  NBA FINALS
+=======================================================
+
+  🏀 NYK vs OKC
+     → NYK wins 4-3  (win prob: 30%)
+     Game     Winner   Series
+     Game 1    OKC      0-1
+     Game 2    NYK      1-1
+     Game 3    NYK      2-1
+     Game 4    OKC      2-2
+     Game 5    NYK      3-2
+     Game 6    OKC      3-3
+     Game 7    NYK      4-3
+
+🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆
+  NBA CHAMPION: NYK
+🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆🏆
+
+Analysis Accuracy: out of 15 total series, the AI accuractely predicted the correct winner 9 times. Giving it a basic analsis accuracy of 60%.
+
+### Analysis results
+
+Accuracy per year:
+
+Year 2026: 60%, 53%, 53%, 60%, 67%
+Year 2025: 47%, 40%, 26%, 26%, 53% (oddly low due to the model not being able to predict Haliburton's unexpected playoff run.)
+Year 2024: 67%, 53%, 53%, 73%, 73%
+Year 2023: 67%, 60%, 80%, 53%, 80% (model did quite well despite the unexpected 8th seed run into the finals by the heat which the model guessed right only once)
+Year 2022: 46%, 60%, 53%, 60%, 40%
+Year 2021: 53%, 46%, 60%, 53%, 67%
+
+Using basic t-int for a accuracy with a 95% confidence we are 95% confident that the accuracy of our model is between: [0.512, 0.61] which is higher than 50% meaning our model is more accurate than guessing and if we were to remove the 2024-2025 season because of Hailburton's unexpected run, the accuracy with 95% confidence would be between: [0.554, 0.638] which is a really good accuracy. 
+
 ## ⚠️ Notes
 
 - **First run of Cell 2 takes ~5 minutes** — it's making hundreds of NBA API calls. After that it loads from cache in under a second.
